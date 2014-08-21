@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-G:\SAD\HMS\Project\HMS\HMS\obj\Debug\
+Z:\HMS\obj\Debug\
 HMS
 none
 false
 DEBUG;TRACE
-G:\SAD\HMS\Project\HMS\HMS\App.xaml
-8-1034001732
+Z:\HMS\App.xaml
+7-143344677
 
-22-1747221302
+24395733618
 12-1401562060
-View\AddNewPatient.xaml;View\Appointment.xaml;View\Doctor1.xaml;View\Login.xaml;View\Assistant1.xaml;View\Logout.xaml;View\PatientDetails.xaml;View\Symptoms.xaml;
+View\AddNewPatient.xaml;View\Appointment.xaml;View\Doctor.xaml;View\Login.xaml;View\Logout.xaml;View\PatientDetails.xaml;View\Symptoms.xaml;
 
-False
+True
 

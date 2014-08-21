@@ -61,11 +61,20 @@ namespace HMS.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Y:\Clinic Database.accdb.
+        ///   Looks up a localized string similar to Y:\ClinicDatabase.accdb.
         /// </summary>
         internal static string DBPath {
             get {
                 return ResourceManager.GetString("DBPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to X:\.
+        /// </summary>
+        internal static string FolderDir {
+            get {
+                return ResourceManager.GetString("FolderDir", resourceCulture);
             }
         }
     }

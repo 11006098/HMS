@@ -5,6 +5,7 @@
     <Canvas>
         <Label Name="lblSymtomps" Height="25" Width="95" Canvas.Left="0" Canvas.Top="10" Content="Specialization"></Label>
         <ComboBox Name="txtBoxSymtomps" Height="25" Width="218" Canvas.Left="139" Canvas.Top="10"></ComboBox>
+        <DatePicker Name="Appointment" Height="25" Width="105" Canvas.Left="400" Canvas.Top="10"></DatePicker>
         <Canvas Height="200" Width="560" Canvas.Top="50" Canvas.Left="10">
             <ListView Height="200" Width="560">
                 <ListView.View>

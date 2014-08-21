@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 Z:\HMS\App.xaml
-81516002754
+7-143344677
 
-17456447059
+20-1120314605
 12-1401562060
-View\AddNewPatient.xaml;View\Assistant2.xaml;View\Doctor1.xaml;View\Login.xaml;View\Assistant1.xaml;View\Logout.xaml;View\PatientDetails.xaml;View\Symptoms.xaml;
+View\AddNewPatient.xaml;View\Appointment.xaml;View\Doctor.xaml;View\Login.xaml;View\Logout.xaml;View\PatientDetails.xaml;View\Symptoms.xaml;
 
 False
 

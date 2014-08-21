@@ -37,7 +37,7 @@
             <Button Content="Click" Canvas.Left="100" Canvas.Top="2.5" Height="25" Width="50"></Button>
         </Canvas>
         <Canvas Canvas.Top="300" Canvas.Left="20" Height="50" Width="250">
-            <Button Content="Back" Canvas.Left="50" Canvas.Top="10" Height="30" Width="55"></Button>
+            <Button Content="Submit" Canvas.Left="50" Canvas.Top="10" Height="30" Width="55"></Button>
             <Button Content="Cancel" Canvas.Left="150" Canvas.Top="10" Height="30" Width="55"></Button>
         </Canvas>
     </Canvas>

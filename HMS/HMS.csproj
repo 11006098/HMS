@@ -53,20 +53,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\Login.cs" />
-    <Compile Include="Model\Patient.cs" />
+    <Compile Include="Model\LoginModel.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\NewPatient.cs" />
     <Compile Include="Model\PatientHistory.cs" />
     <Compile Include="Utils\OnChangedProperty.cs" />
     <Compile Include="Utils\Utilities.cs" />
-    <Compile Include="ViewModel\PatientViewModel.cs" />
+    <Compile Include="ViewModel\AppointmentViewModel.cs" />
+    <Compile Include="ViewModel\LoginViewModel.cs" />
+    <Compile Include="ViewModel\NewPatientViewModel.cs" />
     <Compile Include="View\AddNewPatient.xaml.cs">
       <DependentUpon>AddNewPatient.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\Assistant1.xaml.cs">
-      <DependentUpon>Assistant1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\Doctor1.xaml.cs">
-      <DependentUpon>Doctor1.xaml</DependentUpon>
+    <Compile Include="View\Doctor.xaml.cs">
+      <DependentUpon>Doctor.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Logout.xaml.cs">
       <DependentUpon>Logout.xaml</DependentUpon>
@@ -85,7 +85,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Doctor1.xaml">
+    <Page Include="View\Doctor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,10 +104,6 @@
       <DependentUpon>Login.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="View\Assistant1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="View\Logout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

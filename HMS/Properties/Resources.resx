@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="DBPath" xml:space="preserve">
-    <value>Y:\Clinic Database.accdb</value>
+    <value>Y:\ClinicDatabase.accdb</value>
+  </data>
+  <data name="FolderDir" xml:space="preserve">
+    <value>X:\</value>
   </data>
 </root>
