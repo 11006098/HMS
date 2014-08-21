@@ -1,0 +1,9 @@
+﻿<Window x:Class="HMS.View.Logout"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Logout" Height="300" Width="300">
+    <Canvas>
+        <Label Content="User has been logged off successfully" Canvas.Top="25"></Label>
+        <Button Content="Login Again" Canvas.Top="75" Height="30" Width="100"></Button>
+    </Canvas>
+</Window>
