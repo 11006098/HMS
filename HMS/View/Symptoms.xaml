@@ -1,19 +1,28 @@
-﻿<Window x:Class="HMS.View.Symptoms"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Symptoms" Height="300" Width="600">
+        xmlns:ViewModel="clr-namespace:HMS.ViewModel" x:Class="HMS.View.Symptoms"
+        Title="Specialization" Height="300" Width="725" Loaded="Window_Loaded">
     <Canvas>
-        <Label Name="lblSymtomps" Height="25" Width="95" Canvas.Left="0" Canvas.Top="10" Content="Specialization"></Label>
-        <ComboBox Name="txtBoxSymtomps" Height="25" Width="218" Canvas.Left="139" Canvas.Top="10"></ComboBox>
-        <DatePicker Name="Appointment" Height="25" Width="105" Canvas.Left="400" Canvas.Top="10"></DatePicker>
+        <Label x:Name="lblSymtomps" Height="25" Width="95" Canvas.Left="0" Canvas.Top="10" Content="Specialization"/>
+        <ComboBox x:Name="txtBoxSymtomps" Height="25" Width="144" Canvas.Left="100" Canvas.Top="10" ItemsSource="{Binding GetListSymptoms}">
+            <ComboBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Height="25" Width="210" Text="{Binding Specialization}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
+         </ComboBox>
+        <DatePicker x:Name="AppointmentDate" Height="25" Width="150" Canvas.Left="270" Canvas.Top="10" ></DatePicker>
+        <Button x:Name="Search" Height="25" Width="70" Canvas.Top="10" Canvas.Left="450" Content="Search" Click="Search_Click"></Button>
         <Canvas Height="200" Width="560" Canvas.Top="50" Canvas.Left="10">
-            <ListView Height="200" Width="560">
+            <ListView Name="ListDoctor" Height="200" Width="700" ItemsSource="{Binding GetList}" MouseDoubleClick="ListDoctor_MouseDoubleClick" >
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Name" Width="140"></GridViewColumn>
-                         <GridViewColumn Header="Contact" Width="140"></GridViewColumn>
-                        <GridViewColumn Header="Email ID" Width="140"></GridViewColumn>
-                        <GridViewColumn Header="Select" Width="140"></GridViewColumn>
+                        <GridViewColumn Header="Name" Width="140" DisplayMemberBinding="{Binding Name}" />
+                        <GridViewColumn Header="Contact" Width="140" DisplayMemberBinding="{Binding Contact}"/>
+                        <GridViewColumn Header="Email ID" Width="140" DisplayMemberBinding="{Binding Email}"/>
+                        <GridViewColumn Header="Date" Width="140" DisplayMemberBinding="{Binding Date}"/>
+                        <GridViewColumn Header="Time" Width="140" DisplayMemberBinding="{Binding Time}"/>
                     </GridView>
                 </ListView.View>
             </ListView>

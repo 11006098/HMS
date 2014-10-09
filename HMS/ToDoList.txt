@@ -1,0 +1,11 @@
+SAD To Do 
+1) Renaming of Forms
+2) Renaming of Objects
+3) Renaming of Table Name/ Columns
+4) Creation of Models
+5) Creation Of Logo (Ayon)
+6) Updation of DB Patient Table with Address and Contact details (Vishvesh)
+7) Creation of ViewModels
+8) Connect to database with ViewModels
+9) SQL Queries to fetch and update where ever needed (Vishvesh).
+10) Style using Blend

@@ -24,34 +24,36 @@ namespace HMS.View
         {
             InitializeComponent();
         }
+
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
             AddNewPatient patientAdd = new AddNewPatient();
             patientAdd.ShowDialog();
-            this.DataContext = new AppointmentViewModel();
+            this.DataContext = new AppointmentViewModel(string.Empty);
         }
+
         private void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-
+            this.DataContext = new AppointmentViewModel(txtboxPatientID.Text);
             
         }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            this.DataContext = new AppointmentViewModel();
+            this.DataContext = new AppointmentViewModel(string.Empty);
         }
+
         private void txtboxPatientID_TextChanged(object sender, TextChangedEventArgs e)
         {
-
         }
+
         private void PatientList_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            HMS.Model.Appointment currentSelection = PatientList.SelectedItem as HMS.Model.Appointment;
-            if (currentSelection != null)
-            {
-                Symptoms symptomsWindow = new Symptoms();
-                symptomsWindow.ShowDialog();
-
-            }
+            Model.Appointment temp = PatientList.SelectedItem as Model.Appointment;
+            Symptoms newSymptoms = new Symptoms(temp.PatientID);
+            newSymptoms.ShowDialog();
+            //Model.Appointment temp = PatientList.SelectedItem as Model.Appointment;
+            this.DataContext = new AppointmentViewModel(temp.PatientID);
         }
        
     }

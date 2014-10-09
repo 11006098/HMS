@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "HMS2", "HMS2\HMS2.lsxtproj", "{56DE3B7C-AF9A-49D1-8402-B3BECA1DAECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS2.Server", "HMS2\HMS2.Server\HMS2.Server.csproj", "{809BDB48-66C8-4067-BFF2-C7B84A06D6D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HMS2.DesktopClient", "HMS2\HMS2.DesktopClient\HMS2.DesktopClient.csproj", "{B76EC783-F0BD-463E-BF3F-15D9A39ABD71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{56DE3B7C-AF9A-49D1-8402-B3BECA1DAECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56DE3B7C-AF9A-49D1-8402-B3BECA1DAECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56DE3B7C-AF9A-49D1-8402-B3BECA1DAECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56DE3B7C-AF9A-49D1-8402-B3BECA1DAECA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{809BDB48-66C8-4067-BFF2-C7B84A06D6D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{809BDB48-66C8-4067-BFF2-C7B84A06D6D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{809BDB48-66C8-4067-BFF2-C7B84A06D6D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{809BDB48-66C8-4067-BFF2-C7B84A06D6D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B76EC783-F0BD-463E-BF3F-15D9A39ABD71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B76EC783-F0BD-463E-BF3F-15D9A39ABD71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B76EC783-F0BD-463E-BF3F-15D9A39ABD71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B76EC783-F0BD-463E-BF3F-15D9A39ABD71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

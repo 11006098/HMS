@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="xstoredb" Class="LinqDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DOUG-PC;Initial Catalog=xstoredb;Integrated Security=True" SettingsObjectName="ProductMvvm.Properties.Settings" SettingsPropertyName="xstoredbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Categories" Member="LinqCategories">
+    <Type Name="LinqCategory">
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="LinqCategory_LinqProduct" Member="LinqProducts" ThisKey="CategoryID" OtherKey="CategoryID" Type="LinqProduct" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Products" Member="LinqProducts">
+    <Type Name="LinqProduct">
+      <Column Name="ProductID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ModelNumber" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ModelName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitCost" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="LinqCategory_LinqProduct" Member="LinqCategory" ThisKey="CategoryID" OtherKey="CategoryID" Type="LinqCategory" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddProduct" Method="AddProduct">
+    <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ModelNumber" Parameter="modelNumber" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ModelName" Parameter="modelName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UnitCost" Parameter="unitCost" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.DeleteProduct" Method="DeleteProduct">
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateProduct" Method="UpdateProduct">
+    <Parameter Name="ProductId" Parameter="productId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryName" Parameter="categoryName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ModelNumber" Parameter="modelNumber" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="ModelName" Parameter="modelName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UnitCost" Parameter="unitCost" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -11,7 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using HMS.ViewModel;
+using HMS.Model;
 namespace HMS.View
 {
     /// <summary>
@@ -19,9 +20,27 @@ namespace HMS.View
     /// </summary>
     public partial class Doctor : Window
     {
-        public Doctor()
+        private string _id;
+        public Doctor(string strDoctor_ID)
         {
-            InitializeComponent();
+            if (string.IsNullOrEmpty(strDoctor_ID) == false)
+            {
+                InitializeComponent();
+                DataContext = new DoctorViewModel(strDoctor_ID);
+                _id = strDoctor_ID;
+            }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void ListView_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            DoctorPatientListDataModel temp = AppointmentList.SelectedItem as DoctorPatientListDataModel;
+            PatientDetails patient = new PatientDetails(temp, _id);
+            patient.ShowDialog();
         }
     }
 }

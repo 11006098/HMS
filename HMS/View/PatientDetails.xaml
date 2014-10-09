@@ -1,44 +1,57 @@
 ﻿<Window x:Class="HMS.View.PatientDetails"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="PatientDetails" Height="400" Width="300">
+        Title="PatientDetails" Height="500" Width="300">
     <Canvas Background="White">
-        <Label  Height="25" Width="200" Canvas.Left="0" Canvas.Top="10" Content="Patient Name : Name"></Label>
+        <Label  Height="25" Width="100" Canvas.Left="0" Canvas.Top="10" Content="Patient Name :"></Label>
+        <TextBlock Height="25" Width="100" Canvas.Left="105" Canvas.Top="10" Text ="{Binding SetPatientData.PatientName }" ></TextBlock>
         <Canvas Canvas.Top="50" Canvas.Left="20" Height="30" Width="250">
             <Label Content="Patient ID" Canvas.Left="0" Canvas.Top="0" Height="30" Width="63"></Label>
-            <TextBox Text="12345" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <TextBlock Text ="{Binding SetPatientData.PatientID }" Canvas.Left="100" Height="30" Width="150" IsEnabled="False"/>
         </Canvas>
         <Canvas Canvas.Top="80" Canvas.Left="20" Height="30" Width="250">
             <Label Content="Name" Canvas.Left="0" Canvas.Top="0" Height="30" Width="50"></Label>
-            <TextBox Text="Test1" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <TextBlock IsEnabled="False" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150" Text ="{Binding SetPatientData.PatientName }" ></TextBlock>
         </Canvas>
         <Canvas Canvas.Top="110" Canvas.Left="20" Height="30" Width="250">
             <Label Content="Blood Group" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <TextBox Text="B+" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <TextBox Text ="{Binding SetPatientData.BloodGroup }"  Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
         </Canvas>
         <Canvas Canvas.Top="140" Canvas.Left="20" Height="30" Width="250">
-            <Label Content="Sugar Level" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <TextBox Text="150" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <Label Content="Diagnosis" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
+            <TextBox Text ="{Binding SetPatientData.Diagonsis }"  Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
         </Canvas>
         <Canvas Canvas.Top="170" Canvas.Left="20" Height="30" Width="250">
-            <Label Content="B.P." Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <TextBox Text="1500" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <Label Content="Blood Pressure" Canvas.Left="0" Canvas.Top="0" Height="30" Width="95"></Label>
+            <TextBox Text ="{Binding SetPatientData.BloodPressure }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
         </Canvas>
-        <Canvas Canvas.Top="210" Canvas.Left="20" Height="30" Width="250">
-            <Label Content="height" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <TextBox Text="150 cm" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+        <Canvas Canvas.Top="200" Canvas.Left="20" Height="30" Width="250">
+            <Label Content="Sugar" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
+            <TextBox Text ="{Binding SetPatientData.BloodSugar }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
         </Canvas>
-        <Canvas Canvas.Top="240" Canvas.Left="20" Height="30" Width="250">
+        <Canvas Canvas.Top="230" Canvas.Left="20" Height="30" Width="250">
+            <Label Content="Urine" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
+            <TextBox Text ="{Binding SetPatientData.Urine }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+        </Canvas>
+        <Canvas Canvas.Top="260" Canvas.Left="20" Height="30" Width="250">
+            <Label Content="WBC" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
+            <TextBox Text ="{Binding SetPatientData.WBC }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+        </Canvas>
+        <Canvas Canvas.Top="290" Canvas.Left="20" Height="30" Width="250">
+            <Label Content="RBC" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
+            <TextBox Text ="{Binding SetPatientData.RBC }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+        </Canvas>
+        <Canvas Canvas.Top="320" Canvas.Left="20" Height="30" Width="250">
             <Label Content="Weight" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <TextBox Text="50 KG" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
+            <TextBox Text ="{Binding SetPatientData.Weight }" Canvas.Left="100" Canvas.Top="0" Height="30" Width="150"></TextBox>
         </Canvas>
-        <Canvas Canvas.Top="270" Canvas.Left="20" Height="30" Width="250">
+        <Canvas Canvas.Top="350" Canvas.Left="20" Height="30" Width="250">
             <Label Content="Reports" Canvas.Left="0" Canvas.Top="0" Height="30" Width="80"></Label>
-            <Button Content="Click" Canvas.Left="100" Canvas.Top="2.5" Height="25" Width="50"></Button>
+            <Button Content="Click" Canvas.Left="100" Canvas.Top="2.5" Height="25" Width="50" Click="Button_Click"></Button>
         </Canvas>
-        <Canvas Canvas.Top="300" Canvas.Left="20" Height="50" Width="250">
-            <Button Content="Submit" Canvas.Left="50" Canvas.Top="10" Height="30" Width="55"></Button>
-            <Button Content="Cancel" Canvas.Left="150" Canvas.Top="10" Height="30" Width="55"></Button>
+        <Canvas Canvas.Top="410" Canvas.Left="20" Height="50" Width="250">
+            <Button Content="Submit" Canvas.Left="50" Canvas.Top="10" Height="30" Width="55" Click="Submit_Click"></Button>
+            <Button Content="Cancel" Canvas.Left="150" Canvas.Top="10" Height="30" Width="55" Click="Cancel_Click"></Button>
         </Canvas>
     </Canvas>
 </Window>

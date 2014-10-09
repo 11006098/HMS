@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Ayon\Documents\GitHub\HMS\HMS\obj\Debug\
+Z:\HMS\obj\Debug\
 HMS
 none
 false
 DEBUG;TRACE
-C:\Users\Ayon\Documents\GitHub\HMS\HMS\App.xaml
+Z:\HMS\App.xaml
 7-143344677
 
-20-1120314605
-12-1401562060
+28-1197479765
+13-1868018694
 View\AddNewPatient.xaml;View\Appointment.xaml;View\Doctor.xaml;View\Login.xaml;View\Logout.xaml;View\PatientDetails.xaml;View\Symptoms.xaml;
 
 False

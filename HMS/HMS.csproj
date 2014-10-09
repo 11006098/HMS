@@ -36,6 +36,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -53,15 +54,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Model\DoctorModel.cs" />
+    <Compile Include="Model\DoctorPatientListDataModel.cs" />
     <Compile Include="Model\LoginModel.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\NewPatient.cs" />
     <Compile Include="Model\PatientHistory.cs" />
+    <Compile Include="Model\SymptomsDataModel.cs" />
+    <Compile Include="Model\SymptomsDataModel2.cs" />
     <Compile Include="Utils\OnChangedProperty.cs" />
     <Compile Include="Utils\Utilities.cs" />
     <Compile Include="ViewModel\AppointmentViewModel.cs" />
+    <Compile Include="ViewModel\DoctorViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\NewPatientViewModel.cs" />
+    <Compile Include="ViewModel\PatientDetailsViewModel.cs" />
+    <Compile Include="ViewModel\Symptoms2ViewModel.cs" />
+    <Compile Include="ViewModel\SymptomsViewModel.cs" />
     <Compile Include="View\AddNewPatient.xaml.cs">
       <DependentUpon>AddNewPatient.xaml</DependentUpon>
     </Compile>

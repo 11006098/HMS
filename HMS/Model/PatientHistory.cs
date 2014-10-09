@@ -7,40 +7,23 @@ using System.Threading.Tasks;
 
 namespace HMS.Model
 {
-    class PatientHistory
+    public class PatientHistory
     {
 
         private string _strPatientID;
-        private string _strDoctorID;
-        private string _strAppointmentID;
-        private string _strDiagnosis;
-        private string _BP;
-        private string _BS;
-        private string _Urine;
-        private string _WBC;
-        private string _RBC;
+        private string _strPatientName;
+        private string _BloodGroup;
+        private string _diagonsis;
+        private string _BloodPressure;
+        private string _BloodSugar;
+        private string _urine;
+        private string _wbc;
+        private string _rbc;
         private string _Weight;
         private string _FolderLoc;
-
+        
+        private string _Height;
         private OnChangedProperty PPC = new OnChangedProperty();
-
-
-        public PatientHistory() { }
-        public PatientHistory(string inPatientID, string inDoctorID, string inAppointmentID, string inDiagnosis, string inBP,
-        string inBS, string inUrine, string inWBC, string inRBC, string inWeight, string inFolderLoc)
-        {
-            PatientID = inPatientID;
-            DoctorID = inDoctorID;
-            AppointmentID = inAppointmentID;
-            Diagnosis = inDiagnosis;
-            BP = inBP;
-            BS = inBS;
-            Urine = inUrine;
-            WBC = inWBC;
-            RBC = inRBC;
-            Weight = inWeight;
-            FolderLoc = inFolderLoc;
-        }
 
         public string PatientID
         {
@@ -54,111 +37,114 @@ namespace HMS.Model
                 PPC.NotifyPropertyChanged("PatientID");
             }
         }
-
-        public string DoctorID
+        public string PatientName
         {
             get
             {
-                return _strDoctorID;
+                return _strPatientName;
             }
             set
             {
-                _strDoctorID = value;
-                PPC.NotifyPropertyChanged("DoctorID");
+                _strPatientName = value;
+                PPC.NotifyPropertyChanged("PatientName");
+            }
+        }       
+        public string Height
+        {
+            get
+            {
+                return _Height;
+            }
+            set
+            {
+                _Height = value;
+                PPC.NotifyPropertyChanged("Height");
             }
         }
-
-        public string AppointmentID
+        public string BloodGroup
         {
             get
             {
-                return _strAppointmentID;
+                return _BloodGroup;
             }
             set
             {
-                _strAppointmentID = value;
-                PPC.NotifyPropertyChanged("AppointmentID");
+                _BloodGroup = value;
+                PPC.NotifyPropertyChanged("BloodGroup");
             }
         }
-
-        public string Diagnosis
+        public string Diagonsis
         {
             get
             {
-                return _strDiagnosis;
+                return _diagonsis;
             }
             set
             {
-                _strDiagnosis = value;
-                PPC.NotifyPropertyChanged("Diagnosis");
+                _diagonsis = value;
+                PPC.NotifyPropertyChanged("Diagonsis");
             }
         }
-
-        public string BP
+        public string BloodPressure
         {
             get
             {
-                return _BP;
+                return _BloodPressure;
             }
             set
             {
-                _BP = value;
+                _BloodPressure = value;
                 PPC.NotifyPropertyChanged("BP");
             }
         }
-
-        public string BS
+        public string BloodSugar
         {
             get
             {
-                return _BS;
+                return _BloodSugar;
             }
             set
             {
-                _BS = value;
+                _BloodSugar = value;
                 PPC.NotifyPropertyChanged("BS");
             }
         }
-
         public string Urine
         {
             get
             {
-                return _Urine;
+                return _urine;
             }
             set
             {
-                _Urine = value;
+                _urine = value;
                 PPC.NotifyPropertyChanged("Urine");
             }
         }
-
         public string WBC
         {
             get
             {
-                return _WBC;
+                return _wbc;
             }
             set
             {
-                _WBC = value;
+                _wbc = value;
                 PPC.NotifyPropertyChanged("WBC");
             }
         }
-
         public string RBC
         {
             get
             {
-                return _RBC;
+                return _rbc;
             }
             set
             {
-                _RBC = value;
+                _rbc = value;
                 PPC.NotifyPropertyChanged("RBC");
             }
-        }
-
+        }       
         public string Weight
         {
             get
@@ -171,7 +157,6 @@ namespace HMS.Model
                 PPC.NotifyPropertyChanged("Weight");
             }
         }
-
         public string FolderLoc
         {
             get
@@ -184,7 +169,6 @@ namespace HMS.Model
                 PPC.NotifyPropertyChanged("FolderLoc");
             }
         }		
-		
 	
     }
 }

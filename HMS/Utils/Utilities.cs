@@ -11,7 +11,8 @@ namespace HMS.Utils
     public class Utilities
     {
         public OleDbDataReader GetDataReader(string strSqlQuery, OleDbConnection conn)
-        {OleDbDataReader result = null;
+        {
+            OleDbDataReader result = null;
         try
         {
 
@@ -57,7 +58,15 @@ namespace HMS.Utils
                 return false;
             }
         }
-
+        public bool UpdateDB(string strsQlQuery, OleDbConnection conn)
+        {
+            bool result = false;
+            if((string.IsNullOrEmpty(strsQlQuery)==false)&&(conn!=null))
+            {
+                OleDbCommand cmd = new OleDbCommand(strsQlQuery, conn);
+            }
+            return result;
+        }
         public string GetID(string strTableName, string strIDColumnName)
         {
             string result = string.Empty;

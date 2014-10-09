@@ -13,6 +13,8 @@ namespace HMS.Model
         private string _strPatientAddress;
         private string _strPatientContact;
         private string _strDocID;
+        private string _date;
+        private string _time;
         private DateTime _newAppointment;
         private OnChangedProperty PPC = new OnChangedProperty();
         
@@ -88,6 +90,30 @@ namespace HMS.Model
             {
                 _strDocID = value;
                 PPC.NotifyPropertyChanged("DoctorName");
+            }
+        }
+        public string Date
+        {
+            get
+            {
+                return _date;
+            }
+            set
+            {
+                _date = value;
+                PPC.NotifyPropertyChanged("Date");
+            }
+        }
+        public string Time
+        {
+            get
+            {
+                return _time;
+            }
+            set
+            {
+                _time = value;
+                PPC.NotifyPropertyChanged("Time");
             }
         }
         public DateTime NewAppointment

@@ -25,7 +25,7 @@ namespace HMS
     /// </summary>
     public partial class Login : Window
     { public Utils.Utilities Commands = new Utilities();
-     LoginViewModel LoginData = new LoginViewModel();
+        LoginViewModel LoginData = new LoginViewModel();
         public Login()
         {
             InitializeComponent();
@@ -53,7 +53,7 @@ namespace HMS
                     }
                     if (Group.Equals("D") == true )
                     {
-                        Doctor varAppointment = new Doctor();
+                        Doctor varAppointment = new Doctor(LoginData.LoginData.UserID);
                         varAppointment.Show();
 
                     }

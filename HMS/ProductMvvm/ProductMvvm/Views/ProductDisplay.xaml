@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="ProductMvvm.Views.ProductDisplay"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:vw="clr-namespace:ProductMvvm.Views"        
+    xmlns:vm="clr-namespace:ProductMvvm.ViewModels">                
+    <UserControl.DataContext>
+        <vm:ProductDisplayModel />
+    </UserControl.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+         <StackPanel  HorizontalAlignment="Right" Orientation="Horizontal" Margin="5,2,10,10">
+            <Button Command="{Binding GetProductsCommand}" Margin="2,5,0,0"  Padding="5" Background="Black" Height="35" Width="70" 
+                  >DB Refresh</Button>
+            <Button Margin="2,5,0,0"  Padding="2" Background="Black" Height="35" Width="50"
+                  Command="{Binding ClearCommand}">Clear</Button>
+            <Button Margin="2,5,0,0"  Padding="2" Background="Black" Height="35" Width="50"
+                  Command="{Binding UpdateCommand}">Update</Button>
+            <Button Margin="2,5,0,0"  Padding="2" Background="Black" Height="35" Width="50"
+                  Command="{Binding DeleteCommand}">Delete</Button>
+            <Button Margin="2,5,0,0"  Background="Black" Height="35" Width="50"
+                  Command="{Binding AddCommand}" Padding="2">Add</Button>
+        </StackPanel>
+        <Grid Margin="10" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Margin="7">Model Number:</TextBlock>
+            <TextBox Margin="5" Grid.Column="1" BorderBrush="{Binding Path=Stat.ModelNumberBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.ModelNumber, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            
+            <TextBlock Margin="7" Grid.Row="1">Model Name:</TextBlock>
+            <TextBox Margin="5" Grid.Row="1" Grid.Column="1" BorderBrush="{Binding Path=Stat.ModelNameBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.ModelName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            
+            <TextBlock Margin="7" Grid.Row="2">Unit Cost:</TextBlock>
+            <TextBox Margin="5" Grid.Row="2" Grid.Column="1"   BorderBrush="{Binding Path=Stat.UnitCostBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.UnitCost, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+         
+            <TextBlock Margin="7" Grid.Row="3">Category:</TextBlock>
+            <TextBox Margin="5" Grid.Row="3" Grid.Column="1"  BorderBrush="{Binding Path=Stat.CategoryNameBrush}" BorderThickness="1"
+                     Text="{Binding Path=DisplayedProduct.CategoryName, UpdateSourceTrigger=PropertyChanged}"></TextBox>
+            
+            <TextBlock Margin="7,7,7,0" Grid.Row="4">Description:</TextBlock>
+            <TextBox Margin="7" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
+                 TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Text="{Binding Path=DisplayedProduct.Description}"></TextBox>
+ 
+            <TextBlock Margin="7,25,15,0" Grid.Row="6">Status:</TextBlock>
+            <TextBox Margin="7" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" 
+                 Text="{Binding Path=Stat.Status}"></TextBox>
+        </Grid>
+    </Grid>
+</UserControl>
